@@ -26,6 +26,12 @@ h1 {
     margin: 0;
 }
 
+.youtube-video {
+    aspect-ratio: 16 / 9;
+    width: 100%;
+    max-width: 700px;
+  }
+
 #mainwrapper {
 	/* Container of all content */
 	overflow: auto;
