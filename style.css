@@ -6,16 +6,19 @@ html, body {
     font-size: 100%;
     background-color: #f0efe9;
 }
-
 a {
     text-decoration: none;
 }
-
 h1 {
     font-family: 'Rubik', sans-serif;
     font-weight: 600;
 
 }
+.only-on-mobile {
+    display:none;
+}
+
+
 #mainwrapper {
 	/* Container of all content */
 	overflow: auto;
@@ -85,53 +88,90 @@ header nav a {
 #introText h1 {
     color: #5c6932;
     font-weight: 500;
-    font-size: 4em;
+    font-size: 4rem;
     line-height: 90%;
 }
 
-#mainContent {
-	/* Container for the blog post in individal blog view */
-	width: 60%;
-	float: left;
-	padding-right: 2%;
+#blog {
+    padding-left: 5%;
+    padding-right: 5%;
 }
 
-#mainContent .blogPost {
-    position: relative;
-    margin: 2% 1% 2% 1%;
-    /* display: flex;
-    flex-wrap: wrap; */
-    
+#blog h1 {
+    font-size: 3rem;
+    color: #3e6177;
 }
 
-.blogPost::after {
-    content: "";
+
+#blogPost {
+    /* position: relative; */
+    max-width: 100%;
+    min-height: 250px;
+    margin: 3% 0 3% 0;
     display: flex;
     flex-wrap: wrap;
-    padding-bottom: 100%;
+    color: #000000;
 }
 
-#mainContent .blog-post h2{
+#mainContent #blogPost h2{
     line-height: 80%;
 }
 
 .blog-desc{
-    /* position: absolute; */
-    margin: 2% 1% 2% 1%;
-}
-.blog-post .blog-img {
-    /* position: absolute; */
-    border-radius: 10px;
-    max-height: 300px;
-    object-fit: cover;  
+    margin: 3% 1% 2% 2%;
+    flex: 3 1 400px;
+    flex-direction: column;
 }
 
-#mainContent #blogPost img{
-    
-    border-radius: 10px;
-    max-height: 300px;
-    object-fit: cover;
+.blog-desc h2 {
+    font-family: 'Rubik', sans-serif;
+    font-weight: 400;
+    font-size: 1.75rem;
 }
+
+.blog-desc h2, h3{
+    margin: 0% 0% 1% 0%;
+}
+
+.blog-desc h3 {
+    font-weight: 700;
+    color: #805222;
+}
+
+#blogPost .blog-img {
+    flex: 1 0 250px;
+    max-height: 250px;
+    max-width: 100%;
+    object-fit: cover;  
+    border-radius: 10px;
+}
+
+#blogContent {
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+#blogContent h1 {
+    font-size: 2rem;
+    color: #3e6177;
+}
+#blogContent h2 {
+    margin: 0;
+}
+#blogContent #material {
+    margin-top: 1%;
+    margin-bottom: 0;
+    font-weight: 400;
+    font-size: 1em;
+}
+
+#blogContent img{
+    max-height: 250px;
+    border-radius: 10px;
+    float: left; 
+    margin: 0 2% 0 0; 
+}
+
 .new-arrivals {
 	/* Sidebar*/
     width: 35%;
@@ -207,12 +247,48 @@ header nav a {
 
 
 /*mobile view*/
+/* When website is max-width 480px */
 @media screen and (max-width: 480px) {
-    /* When website is max-width 600px */
     #mainwrapper header #logo {
         /* Company Logo text */
         font-size: 2rem;
         padding-left: 10px;
 
-  }
+    }
+
+    .not-on-mobile {
+        display:none;
+    }
+
+    #introduction {
+        display: inline;
+    }
+    
+    #introText {
+        padding: 1% 3% 1% 3%;
+        width: 93%;
+    }
+    
+    #introText h1 {
+        margin: 2% 0 0 0;
+        font-size: 3.75rem;
+    }
+
+    .new-arrivals {
+        /* Sidebar*/
+        width: 100%;
+    }    
+
+    #blog {
+        padding-left: 3%;
+        padding-right: 3%;
+    }
+    
+    #blog h1 {
+        font-size: 2.75rem;
+        margin: 2% 0;
+    }
+    
+
+    
 }
