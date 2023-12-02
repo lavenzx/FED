@@ -22,33 +22,53 @@
     <div class="shop-container">
         <aside id="sidebar-filter" class="not-on-mobile">
             <ul>
-                <li>Shop All</li>
-                <li>Amigurumi</li>
-                <li>Clothes</li>  
+                <li class="btn active" onclick="filterSelection('all')">Shop All</li>
+                <li class="btn" onclick="filterSelection('amigurumi')">Amigurumi</li>
+                <li class="btn" onclick="filterSelection('accessories')">Accessories</li>
+                <li class="btn" onclick="filterSelection('clothes')">Clothes</li>  
+                <li class="btn" onclick="filterSelection('flowers')">Flowers</li>  
             </ul>
         </aside>
 
         <main class="shop">
             <div class="display-items">
-                <div class="item-container">
+                <div class="item-container accessories">
                     <img class="item" src="images/BlueStar.jpg" alt="Blue Star Tote">
                     <div class="itemDesc">Blue Star Tote<br><div class="price">$30</div></div>
                 </div>
-                <div class="item-container">
+                <div class="item-container accessories">
+                    <img class="item" src="images/StarToteBag.jpg" alt="Star Tote Bag">
+                    <div class="itemDesc">Star Tote Bag<div class="price">$20</div></div>
+                </div>
+                <div class="item-container amigurumi">
                     <img class="item" src="images/Pancake.jpg" alt="Pancake Bunny">
                     <div class="itemDesc">Pancake Bunny<div class="price">$20</div></div>
                 </div>
-                <div class="item-container">
+                <div class="item-container amigurumi">
                     <img class="item" src="images/Bear.jpg" alt="Mini Bear">
                     <div class="itemDesc">Mini Bear<div class="price">$15</div></div>
                 </div>
-                <div class="item-container">
+                <div class="item-container clothes">
                     <img class="item" src="images/MermaidCoreTop.jpg" alt="Mermaid Core Top">
                     <div class="itemDesc">Mermaid Core Top<div class="price">$35</div></div>
                 </div>
+                <div class="item-container flowers">
+                    <img class="item" src="images/Bouquet.jpg" alt="Bouquet">
+                    <div class="itemDesc">Personalized Bouquet<div class="price">$100</div></div>
+                </div>
+                <div class="item-container amigurumi">
+                    <img class="item" src="images/MiffyKeychain.jpg" alt="Miffy Keychain">
+                    <div class="itemDesc">Miffy Keychain<div class="price">$10</div></div>
+                </div>
+                <div class="item-container accessories">
+                    <img class="item" src="images/SakuraBag.jpg" alt="Sakura Bag">
+                    <div class="itemDesc">Sakura Bag<div class="price">$30</div></div>
+                </div>
+
             </div>
         </main>
     </div>
+
     <footer class="site-footer"> 
     <!--************************************************************************
     Footer starts here
@@ -70,5 +90,6 @@
     
     
 </div>
+<script src="script.js"></script>
 </body>
 </html>
