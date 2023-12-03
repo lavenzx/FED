@@ -1,13 +1,14 @@
 <!doctype html>
-<html>
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Ven's Crochet</title>
 <link href="style.css" rel="stylesheet" type="text/css">
+<link rel="website icon" type="image/png" href="images/Logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Maitree:wght@200;300;400;500;600;700&family=Rubik:wght@200;300;400;500;600;700&display=swap" rel="stylesheet"><body>
+<link href="https://fonts.googleapis.com/css2?family=Maitree:wght@200;300;400;500;600;700&family=Rubik:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -20,15 +21,15 @@
     </div>
   </header>
   <div id="content">
-    <section id="introduction">
-        <main id="introText">
+    <main id="introduction">
+        <section id="introText">
             <h1><!-- Blog title -->Welcome Here!</h1>
             <p>
                 In this cozy website, explore various patterns from different creators, look for inspiration,
                 and embark on your crochet journey!<br>
                 Looking for handmade gifts? Explore the shop which sells everything from cute amigurumi to one-of-a-kind clothes!
             </p>
-        </main>
+        </section>
         <aside class="new-arrivals">
             <h1 class="section-heading">New Arrivals!</h1>
             <div class="display-items">
@@ -48,34 +49,67 @@
                     <img class="item" src="images/MermaidCoreTop.jpg" alt="Mermaid Core Top">
                     <div class="itemName">Mermaid Core Top</div>
                 </div>
+                <div class="item-container">
+                    <img class="item" src="images/SakuraBag.jpg" alt="Sakura Bag">
+                    <div class="itemName">Sakura Bag</div>
+                </div>
+                <div class="item-container">
+                    <img class="item" src="images/LavenderBouquet.jpg" alt="Lavendar Bouquet">
+                    <div class="itemName">Lavendar Bouquet</div>
+                </div>
             </div>
         </aside>
-    </section>
+    </main>
     <section id="highlights">
         <h1>Highlights</h1>
-
+        <a href="blogpost.html" title="Link">
+            <div class="blog-post">
+                <img class="blog-img" src="images/HeadphoneBows.jpg" alt="headphone with bows">
+                <div class="blog-desc">
+                    <h2>Headphone Decorations</h2>
+                    <h3>Difficulty: Beginner</h3>
+                    <p id="desc">Elevate your headphone game with our latest blog post! Dive into the world of creativity as we unveil  
+                        irresistibly cute crochet decorations to adorn your headphones. 
+                        Transform your everyday listening into a fashion-forward experience—because why settle for ordinary 
+                        when you can crochet extraordinary style into every beat?
+                    </p>
+                </div>
+            </div>
+        </a>
     </section>
+
     <footer class="site-footer"> 
     <!--************************************************************************
     Footer starts here
     ****************************************************************************-->
-        Follow me on: 
-        <ul class="social-icons">
-            <li>
-                <a class="instagram" href="https://www.instagram.com/crochetbyven/" title="Link" target="_blank"><img src="images/Instagram.png" alt="Instagram"></a>
-            </li>
-            <li>
-                <a class="tiktok" href="https://www.tiktok.com/" title="Link" target="_blank"><img src="images/Tiktok.png" alt="Tiktok"></a>    
-            </li>
-        </ul>
+        <div class="wrap">
+            <div class="social-media">
+                <h3>Follow me on:</h3> 
+                <ul class="social-icons">
+                    <li>
+                        <a class="instagram" href="https://www.instagram.com/crochetbyven/" title="Link" target="_blank"><img src="images/Instagram.png" alt="Instagram"></a>
+                    </li>
+                    <li>
+                        <a class="tiktok" href="https://www.tiktok.com/" title="Link" target="_blank"><img src="images/Tiktok.png" alt="Tiktok"></a>    
+                    </li>
+                </ul>
+            </div>
+            <form>
+                <div class="newsletter-container">
+                <h3>Subscribe to our Newsletter</h3>
+                <input type="text" placeholder="Name" name="name" required>
+                <input type="email" placeholder="Email address" name="mail" required>
+                <input type="submit" value="Subscribe">
+                </div>
+            </form>
+        </div>
         <div class="not-on-mobile">
-            <nav> <a href="index.html" title="Link" style="color:rgb(55, 78, 126)">Home</a> <a href="blog.html" title="Link">Blog</a> <a href="shop.html" title="Link">Shop</a>
-                <a href="#" title="Link">Custom</a> <a href="#" title="Link">View Cart</a></nav>
+            <nav>
+                <a href="index.html" title="Link" style="color:rgb(55, 78, 126)">Home</a> <a href="blog.html" title="Link">Blog</a> <a href="shop.html" title="Link">Shop</a>
+                <a href="#" title="Link">Custom</a> <a href="#" title="Link">View Cart</a>
+            </nav>
         </div>
     </footer>
-
-    
-
   </div>
 </div>
 </body>

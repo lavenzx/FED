@@ -30,10 +30,11 @@ h1 {
     aspect-ratio: 16 / 9;
     width: 100%;
     max-width: 500px;
+    border: none;
 }
 
+/* Container of all content */
 #mainwrapper {
-	/* Container of all content */
 	overflow: auto;
     font-family: 'Maitree', serif;
 }
@@ -45,18 +46,22 @@ h1 {
     max-height: 80px;
 }
 
-/*Logo image*/
-#mainwrapper header img {
-    padding-top: 1%;
-    padding-bottom: 1%;
+header #logo {
+    width: 30%;
+    padding-top: 10px;
+    padding-bottom: 10px;
     padding-left: 2%;
+}
+/*Logo image*/
+#logo img {
+    display: block;
     max-height: 50px;
     margin-top: auto;
     margin-bottom: auto;
 }
 
+/*Nav bar containing links in header */
 nav {
-	/*Nav bar containing links in header */
     position: absolute;
 	text-align: right;
     padding-top: 12px;
@@ -66,8 +71,9 @@ nav {
     right: 0;
     margin-right: 2%;
 }
+/* Links in header */
 nav a {
-	/* Links in header */
+    font-weight: 500;
 	padding-left: 5%;
     color: black;
     font-size: 100%;
@@ -107,7 +113,7 @@ nav a {
 }
 
 
-#blogPost {
+.blog-post {
     /* position: relative; */
     max-width: 100%;
     min-height: 250px;
@@ -118,7 +124,7 @@ nav a {
 }
 
 
-#blogPost #desc{
+.blog-post .desc{
     margin-bottom: 0px;
 }
 
@@ -144,7 +150,7 @@ nav a {
     color: #805222;
 }
 
-#blogPost .blog-img {
+.blog-post .blog-img {
     flex: 1 0 250px;
     max-height: 250px;
     max-width: 100%;
@@ -248,12 +254,24 @@ nav a {
 
 /* Highlights */
 #highlights{
-    background-color: #e1d0c0;
+    padding: 0 2% 2% 2%;
+    background-color: #e4d7cb;
+}
+
+#highlights .blog-post {
+    /* position: relative; */
+    max-width: 100%;
+    min-height: 250px;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    color: #000000;
 }
 
 #highlights h1{
-    padding: 1% 0% 1% 2%;
+    padding: 2% 0%;
     margin: 0;
+    font-size: 1.75rem;
 }
 
 /* Shop Container */
@@ -261,6 +279,7 @@ nav a {
     margin-top: 50px;
     margin-left: 2%;
     margin-right: 2%;
+    min-height: 750px;
     display:flex;
 }
 /* Shop Sidebar design */
@@ -351,11 +370,26 @@ nav a {
 /* Footer desgin */
 .site-footer
 {   
-    position: relative;
     background-image: linear-gradient(120deg,#d5e6e9 0%, #c2e9fb 100%);
     padding: 1% 0 0 2%;
+    font-weight: 400;
+}
+/* Set font weight of h3 in footer */
+.site-footer h3 {
+    font-weight: 600;
+}
+/* Sets class="social-media" and class="newsletter-container" to wrap*/
+.wrap {
+    display: flex;
+    flex-wrap: wrap;
+
 }
 
+/* Set margin space between class="social-media" and class="newsletter-container" */
+.social-media {
+    margin-right: 5%;
+}
+/* Creates the social media icon background circles */
 .site-footer .social-icons a
 {
     width:44px;
@@ -364,7 +398,13 @@ nav a {
     margin: 5px 10px 5px 0;
     border-radius:100%;
     background-color:#a4c6d6;
+    display:inline-block;
+    text-align:center;
+    -webkit-transition:all .2s linear;
+    -o-transition:all .2s linear;
+    transition:all .2s linear;
 }
+/* Gets rid of padding and margins as well as bullet list-style */
 .social-icons
 {
     padding-left:0;
@@ -372,24 +412,19 @@ nav a {
     margin-bottom:0;
     list-style:none
 }
+/* Sets the icons to inline so it's next to each other */
 .social-icons li
 {
     display:inline-block;
     margin-bottom:4px
 }
-.social-icons a{
-    display:inline-block;
-    text-align:center;
-    -webkit-transition:all .2s linear;
-    -o-transition:all .2s linear;
-    transition:all .2s linear;
-}
+/* Sets the size and position of the social media icons in the circle */
 .social-icons img{
     width:30px;
     height:30px;  
     padding-top: 5px;
 }
-
+/* Creates colour hover effect for the icons*/
 .social-icons a.instagram:hover
 {
   background-color:#de879e;
@@ -399,19 +434,60 @@ nav a {
   background-color:#7bede9;
 }
 
+/* Gets rid of the border for the form input and changes border-radius and height */
+input {
+    border: none;
+    border-radius: 2px;
+    height: 35px;
+    padding: 0 10px;
+    margin-bottom: 5px;
+    outline: none;
+}
+/* When user clicks on the input */
+input:focus {
+    border: 2px solid #946d42;
+}
+
+/* Style the submit button */
+input[type=submit] {
+    background-color: #946d42;
+    color: #e3eced;
+    font-weight: 500;
+    cursor: pointer;
+    font-family: 'Rubik', sans-serif;
+}
+input[type=submit]:hover {
+    background-color: #7a552d;
+}
+  
+/*Nav bar containing links in footer */
+.site-footer nav{
+    position: unset;
+    text-align:unset;
+    padding-top: 5px;
+    width: auto;
+    margin-right: 0;
+}
+
+/* Links in footer */
+.site-footer nav a {
+    padding-left: 0;
+	padding-right: 5%;
+}
 
 /*mobile view*/
 /* When website is max-width 480px */
 @media screen and (max-width: 480px) {
-    #mainwrapper header #logo {
-        /* Company Logo text */
-        font-size: 2rem;
-        padding-left: 10px;
-
+    header #logo {
+        padding-left: 0;
+        margin-left: auto;
+        margin-right: auto;
     }
-
-    #mainwrapper header img {
-        padding-top: 12px;
+    header img {
+        display: block;
+        padding-left: 0;
+        max-height: 50px;
+        margin: auto;
     }
 
     .not-on-mobile {
@@ -435,16 +511,37 @@ nav a {
     .new-arrivals {
         /* Sidebar*/
         width: 100%;
-    }    
-
-    .shop-container {
-        margin-top: 20px;
-    }    
+        max-height: none;
+    }
     .shop{
         /* Sidebar*/
         width: 100%;
-
     }
+
+    /* Shop Page*/
+    .shop-container {
+        /* Make shop page inline so filter and items are organized top and bottom. */
+        margin-top: 0px;
+        display: inline;
+        margin-right: 0;
+    }   
+    #sidebar-filter {
+        /* Set the filters width to 100% so it takes up all available space, scroll to view all visible filters*/
+        width: 100%;
+        padding-top: 2%;
+        overflow-y: scroll;
+        white-space: nowrap;
+    }    
+    #sidebar-filter li{
+        /* Set to inline instead of block so filters are side by side*/
+        display: inline;
+    }
+    #sidebar-filter ul{
+        /* Get rid of the border on the right side that would be on desktop*/
+        border-right: none;
+        padding-bottom: 2%;
+    }
+
     #blog h1 {
         font-size: 2.5rem;
         margin: 2% 0;

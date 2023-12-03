@@ -1,13 +1,14 @@
 <!doctype html>
-<html>
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Ven's Crochet</title>
 <link href="style.css" rel="stylesheet" type="text/css">
+<link rel="website icon" type="image/png" href="images/Logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Maitree:wght@200;300;400;500;600;700&family=Rubik:wght@200;300;400;500;600;700&display=swap" rel="stylesheet"><body>
+<link href="https://fonts.googleapis.com/css2?family=Maitree:wght@200;300;400;500;600;700&family=Rubik:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -15,12 +16,12 @@
     <header> 
         <div id="logo"><img src="images/Logo.png" alt="logo"></div>
         <div class="not-on-mobile">
-            <nav> <a href="index.html" title="Link" style="color:rgb(55, 78, 126)">Home</a> <a href="blog.html" title="Link">Blog</a> <a href="shop.html" title="Link">Shop</a>
+            <nav> <a href="index.html" title="Link">Home</a> <a href="blog.html" title="Link">Blog</a> <a href="shop.html" title="Link" style="color:rgb(55, 78, 126)">Shop</a>
                 <a href="#" title="Link">Custom</a> <a href="#" title="Link">View Cart</a></nav>
         </div>
     </header>
     <div class="shop-container">
-        <aside id="sidebar-filter" class="not-on-mobile">
+        <aside id="sidebar-filter">
             <ul>
                 <li class="btn active" onclick="filterSelection('all')">Shop All</li>
                 <li class="btn" onclick="filterSelection('amigurumi')">Amigurumi</li>
@@ -37,8 +38,8 @@
                     <div class="itemDesc">Blue Star Tote<br><div class="price">$30</div></div>
                 </div>
                 <div class="item-container accessories">
-                    <img class="item" src="images/StarToteBag.jpg" alt="Star Tote Bag">
-                    <div class="itemDesc">Star Tote Bag<div class="price">$20</div></div>
+                    <img class="item" src="images/HeadphoneBows.jpg" alt="Headphone Bows">
+                    <div class="itemDesc">Headphone Bows<div class="price">$10</div></div>
                 </div>
                 <div class="item-container amigurumi">
                     <img class="item" src="images/Pancake.jpg" alt="Pancake Bunny">
@@ -64,30 +65,63 @@
                     <img class="item" src="images/SakuraBag.jpg" alt="Sakura Bag">
                     <div class="itemDesc">Sakura Bag<div class="price">$30</div></div>
                 </div>
-
+                <div class="item-container flowers">
+                    <img class="item" src="images/PinkRoses.jpg" alt="Pink Roses">
+                    <div class="itemDesc">Pink Roses<div class="price">$120</div></div>
+                </div>
+                <div class="item-container flowers">
+                    <img class="item" src="images/LavenderBouquet.jpg" alt="Lavender Bouquet">
+                    <div class="itemDesc">Lavender Bouquet<div class="price">$110</div></div>
+                </div>
+                <div class="item-container clothes">
+                    <img class="item" src="images/OffShoulderTop.jpg" alt="Off Shoulder Top">
+                    <div class="itemDesc">Off Shoulder Top<div class="price">$30</div></div>
+                </div>
+                <div class="item-container amigurumi">
+                    <img class="item" src="images/Spiderman.jpg" alt="Spiderverse">
+                    <div class="itemDesc">Spiderverse<div class="price">$20</div></div>
+                </div>
+                <div class="item-container clothes">
+                    <img class="item" src="images/PuffSleeveTop.jpg" alt="Puff Sleeve Top">
+                    <div class="itemDesc">Puff Sleeve Top<div class="price">$40</div></div>
+                </div>
             </div>
         </main>
     </div>
 
     <footer class="site-footer"> 
-    <!--************************************************************************
-    Footer starts here
-    ****************************************************************************-->
-        Follow me on: 
-        <ul class="social-icons">
-            <li>
-                <a class="instagram" href="https://www.instagram.com/crochetbyven/" title="Link" target="_blank"><img src="images/Instagram.png" alt="Instagram"></a>
-            </li>
-            <li>
-                <a class="tiktok" href="https://www.tiktok.com/" title="Link" target="_blank"><img src="images/Tiktok.png" alt="Tiktok"></a>    
-            </li>
-        </ul>
-        <div class="not-on-mobile">
-            <nav> <a href="index.html" title="Link" style="color:rgb(55, 78, 126)">Home</a> <a href="blog.html" title="Link">Blog</a> <a href="shop.html" title="Link">Shop</a>
-                <a href="#" title="Link">Custom</a> <a href="#" title="Link">View Cart</a></nav>
-        </div>
-    </footer>
-    
+        <!--************************************************************************
+        Footer starts here
+        ****************************************************************************-->
+            <div class="wrap">
+                <div class="social-media">
+                    <h3>Follow me on:</h3> 
+                    <ul class="social-icons">
+                        <li>
+                            <a class="instagram" href="https://www.instagram.com/crochetbyven/" title="Link" target="_blank"><img src="images/Instagram.png" alt="Instagram"></a>
+                        </li>
+                        <li>
+                            <a class="tiktok" href="https://www.tiktok.com/" title="Link" target="_blank"><img src="images/Tiktok.png" alt="Tiktok"></a>    
+                        </li>
+                    </ul>
+                </div>
+                <form>
+                    <div class="newsletter-container">
+                    <h3>Subscribe to our Newsletter</h3>
+                    <input type="text" placeholder="Name" name="name" required>
+                    <input type="email" placeholder="Email address" name="mail" required>
+                    <input type="submit" value="Subscribe">
+                    </div>
+                </form>
+            </div>
+            <div class="not-on-mobile">
+                <nav>
+                    <a href="index.html" title="Link">Home</a> <a href="blog.html" title="Link">Blog</a> <a href="shop.html" title="Link" style="color:rgb(55, 78, 126)">Shop</a>
+                    <a href="#" title="Link">Custom</a> <a href="#" title="Link">View Cart</a>
+                </nav>
+            </div>
+        </footer>
+        
     
 </div>
 <script src="script.js"></script>
