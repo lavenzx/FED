@@ -12,13 +12,39 @@
 </head>
 
 <body>
+<script src="script.js"></script>
+
 <div id="mainwrapper">
   <header> 
-    <div id="logo"><img src="images/Logo.png" alt="logo"></div>
-    <div class="not-on-mobile">
-        <nav> <a href="index.html" title="Link" style="color:rgb(55, 78, 126)">Home</a> <a href="blog.html" title="Link">Blog</a> <a href="shop.html" title="Link">Shop</a>
-            <a href="#" title="Link">Custom</a> <a href="#" title="Link">View Cart</a></nav>
+    
+    <div class="only-on-mobile" class>
+        <!-- Use any element to open/show the overlay navigation menu -->
+        <span onclick="openNav()"><img src="images/Menu.png" id="menu-btn"></span>
     </div>
+    
+    <div id="logo"><img src="images/Logo.png" alt="logo"></div>
+
+    <div class="only-on-mobile">
+        <div id="myNav" class="overlay">
+
+            <!-- Button to close the overlay navigation -->
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+          
+            <!-- Overlay content -->
+            <div class="overlay-content">
+              <a href="index.html" title="Link">Home</a>
+              <a href="blog.html" title="Link">Blog</a>
+              <a href="shop.html" title="Link">Shop</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="not-on-mobile">
+        <nav> 
+            <a href="index.html" title="Link" style="color:rgb(55, 78, 126)">Home</a> <a href="blog.html" title="Link">Blog</a> <a href="shop.html" title="Link">Shop</a>
+        </nav>
+    </div>
+    
   </header>
   <div id="content">
     <main id="introduction">
@@ -106,7 +132,6 @@
         <div class="not-on-mobile">
             <nav>
                 <a href="index.html" title="Link" style="color:rgb(55, 78, 126)">Home</a> <a href="blog.html" title="Link">Blog</a> <a href="shop.html" title="Link">Shop</a>
-                <a href="#" title="Link">Custom</a> <a href="#" title="Link">View Cart</a>
             </nav>
         </div>
     </footer>

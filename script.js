@@ -1,3 +1,4 @@
+// For shop
 filterSelection("all")
 function filterSelection(c) {
   var x, i;
@@ -10,7 +11,7 @@ function filterSelection(c) {
   }
 }
 
-// Show filtered elements
+// Hide elements that are not selected
 function AddClass(element, name) {
   var i, arr1, arr2;
   arr1 = element.className.split(" ");
@@ -22,7 +23,8 @@ function AddClass(element, name) {
   }
 }
 
-// Hide elements that are not selected
+
+// Show filtered elements
 function RemoveClass(element, name) {
   var i, arr1, arr2;
   arr1 = element.className.split(" ");
@@ -45,3 +47,16 @@ for (var i = 0; i < btns.length; i++) {
     this.className += " active";
   });
 }
+
+/* Open when someone clicks on the span element */
+function openNav() {
+  document.getElementById("myNav").style.width = "100%";
+  document.getElementById("menu-btn").style.display = "none";
+}
+
+/* Close when someone clicks on the "x" symbol inside the overlay */
+function closeNav() {
+  document.getElementById("myNav").style.width = "0%";
+  document.getElementById("menu-btn").style.display = "block";
+}
+

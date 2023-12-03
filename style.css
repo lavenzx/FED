@@ -1,20 +1,23 @@
 @charset "UTF-8";
+/* Reset styles for the entire website */
 html, body {
-    /* Whole website*/
     margin: 0; 
     padding: 0;
     font-size: 100%;
     background-color: #f0efe9;
     font-weight: 500;
 }
+/* Remove default underline style for anchor links */
 a {
     text-decoration: none;
 }
+/* Default styling for main heading elements */
 h1 {
     font-family: 'Rubik', sans-serif;
     font-weight: 600;
 
 }
+/* Hide elements with the 'only-on-mobile' class on devices other than mobile */
 .only-on-mobile {
     display:none;
 }
@@ -25,7 +28,7 @@ h1 {
     font-size: 1.5em;
     margin: 0;
 }
-
+/* Styling for YouTube video embeds */
 .youtube-video {
     aspect-ratio: 16 / 9;
     width: 100%;
@@ -33,19 +36,20 @@ h1 {
     border: none;
 }
 
-/* Container of all content */
+
+/* Container for all content on the website */
 #mainwrapper {
 	overflow: auto;
     font-family: 'Maitree', serif;
 }
+/* Header styling */
 #mainwrapper header {
-	/*Header */
     position: relative;
 	background-image: linear-gradient(120deg,#d5e6e9 0%, #c2e9fb 100%);
 	font-weight: 400;
     max-height: 80px;
 }
-
+/* Logo styling within the header */
 header #logo {
     width: 30%;
     padding-top: 10px;
@@ -60,7 +64,56 @@ header #logo {
     margin-bottom: auto;
 }
 
-/*Nav bar containing links in header */
+
+/* Styling for the menu icon */
+#menu-btn {
+    float: left; /* Let image float over logo space */
+    padding-left: 3%;
+    padding-top: 18px;
+    height: 35px;
+}
+
+/* Overlay styling for navigation menu */
+.overlay {
+    height: 100%;
+    width: 0;
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 70px;
+    background-color: #ffffffdb; 
+    overflow-x: hidden; /* Disable horizontal scroll */
+    transition: 0.5s;
+}
+    
+/* Position the content inside the overlay */
+.overlay-content {
+    position: relative;
+    top: 60px;
+    width: 100%; /* 100% width */
+    text-align: left; /* Left-aligned text/links */
+    padding-left: 3%;
+}
+    
+/* The navigation links inside the overlay */
+.overlay a {
+    padding: 8px;
+    font-weight: 500;
+    font-size: 1.5rem;
+    color: #805322;
+    display: block; 
+}
+    
+/* Position and styling of the close button in the overlay */
+.overlay .closebtn {
+    position: absolute;
+    top: 0; 
+    left: 3%; /* Button is 3% from the left to align with the links */
+    font-size: 50px;
+}
+    
+
+/* Navigation bar containing links in the header */
 nav {
     position: absolute;
 	text-align: right;
@@ -71,7 +124,7 @@ nav {
     right: 0;
     margin-right: 2%;
 }
-/* Links in header */
+/* Styling for links in the header */
 nav a {
     font-weight: 500;
 	padding-left: 5%;
@@ -79,13 +132,12 @@ nav a {
     font-size: 100%;
 }
 
-
-
+/* index.html Introduction section styling */
 #introduction {
     display: flex;
     right: 0px;
 }
-
+/* Introduction text styling */
 #introText {
     padding-left: 5%;
     padding-right: 2%;
@@ -93,7 +145,7 @@ nav a {
     margin-bottom: auto;
     width: 60%;
 }
-
+/* Styling for the main heading in the introduction */
 #introText h1 {
     color: #5c6932;
     font-weight: 500;
@@ -101,11 +153,13 @@ nav a {
     line-height: 90%;
 }
 
+
+/* index.teml Blog section styling */
 #blog {
     padding-left: 5%;
     padding-right: 5%;
 }
-
+/* Styling for main heading in the blog section */
 #blog h1 {
     font-size: 2.75rem;
     color: #3e6177;
@@ -113,8 +167,9 @@ nav a {
 }
 
 
+/* Used in blog.html and index.html */
+/* Styling for individual blog posts */
 .blog-post {
-    /* position: relative; */
     max-width: 100%;
     min-height: 250px;
     margin: 3% 0 3% 0;
@@ -122,29 +177,28 @@ nav a {
     flex-wrap: wrap;
     color: #000000;
 }
-
-
-.blog-post .desc{
-    margin-bottom: 0px;
-}
-
+/* Styling for the description within blog posts */
 .blog-desc{
     margin: 2% 1% 1% 2%;
     flex: 3 1 400px;
     flex-direction: column;
 }
-
+/* Styling for the content for the description within blog posts*/
+.blog-desc .desc{
+    margin-bottom: 0px;
+}
+/* Styling for the h2 used in blog posts */
 .blog-desc h2 {
     line-height: 80%;
     font-family: 'Rubik', sans-serif;
     font-weight: 400;
     font-size: 1.75rem;
 }
-
+/* Setting the margins for h2 and h3 */
 .blog-desc h2, h3{
     margin: 0% 0% 1% 0%;
 }
-
+/* Styling for the h3 used in blog posts */
 .blog-desc h3 {
     font-weight: 700;
     color: #805222;
@@ -318,6 +372,8 @@ nav a {
 
 
 /* Shop Items*/
+
+/* Items with class "dont-show" will not be shown as display set to none. */
 .dont-show {
     display: none;
 }
@@ -450,14 +506,14 @@ input:focus {
 
 /* Style the submit button */
 input[type=submit] {
-    background-color: #946d42;
-    color: #e3eced;
+    background-color: #97bdce;
+    color: #2b2b2b;
     font-weight: 500;
     cursor: pointer;
     font-family: 'Rubik', sans-serif;
 }
 input[type=submit]:hover {
-    background-color: #7a552d;
+    background-color: #a8ba6c;
 }
   
 /*Nav bar containing links in footer */
@@ -475,9 +531,14 @@ input[type=submit]:hover {
 	padding-right: 5%;
 }
 
+
 /*mobile view*/
 /* When website is max-width 480px */
 @media screen and (max-width: 480px) {
+    .only-on-mobile {
+        display: inline;
+    }
+
     header #logo {
         padding-left: 0;
         margin-left: auto;
