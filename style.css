@@ -132,6 +132,7 @@ nav a {
     font-size: 100%;
 }
 
+
 /* index.html Introduction section styling */
 #introduction {
     display: flex;
@@ -151,6 +152,89 @@ nav a {
     font-weight: 500;
     font-size: 4rem;
     line-height: 90%;
+}
+
+/* New Arrivals*/
+.new-arrivals {
+    width: 50%;
+	background-color: #d5debb;
+    margin-left: auto; 
+    margin-right: 0;
+    max-height: 500px;
+    overflow: scroll;
+}
+/* Hide scroll bar for new-arrivals section */
+.new-arrivals::-webkit-scrollbar {
+    display: none;
+}
+/* Styling for new arrivals section heading */
+.new-arrivals h1{
+    line-height: 0%;
+    padding-left: 3%;
+    padding-top: 1%;
+    font-size: 1.75rem;
+}
+/* Display the items in grid */
+.new-arrivals .display-items {
+    padding: 0% 2%;
+    display: grid;
+    /* Minimum 175px, maximum available space shared equally among items */
+    grid-template-columns: repeat(auto-fit, minmax(175px, 1fr));
+}
+/* Styling for individual items in new arrivals section */
+.new-arrivals .display-items .item-container{
+    position: relative;
+    border-radius: 10px;
+    margin: 0% 2% 4% 2%;
+}
+/* Sets the space for the item-container */
+.new-arrivals .item-container::after {
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+}
+/* Styling for individual items */
+.new-arrivals .item{
+    position: absolute;
+    width: 100%;
+    height: 80%;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+}
+/* Styling for item names */
+.new-arrivals .itemName{
+    position: absolute;
+    display: block;
+    bottom: 0;
+    background-color: #f0efe9;
+    height: 20%;
+    width: 100%;
+    border-radius: 0 0 10px 10px;
+    text-align: center;
+    font-weight: 500;
+    font-size: 100%;
+}
+
+
+/* Highlights */
+#highlights{
+    padding: 0 2% 2% 2%;
+    background-color: #e4d7cb;
+}
+/* Styling for blog posts in highlights section */
+#highlights .blog-post {
+    max-width: 100%;
+    min-height: 250px;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    color: #000000;
+}
+/* Styling for highlights section heading */
+#highlights h1{
+    padding: 2% 0%;
+    margin: 0;
+    font-size: 1.75rem;
 }
 
 
@@ -203,7 +287,7 @@ nav a {
     font-weight: 700;
     color: #805222;
 }
-
+/* Styling for blog post images */
 .blog-post .blog-img {
     flex: 1 0 250px;
     max-height: 250px;
@@ -212,123 +296,45 @@ nav a {
     border-radius: 10px;
 }
 
+
+/* blogpost.html */
+/* Styling for blog content section */
 #blogContent {
     padding-left: 5%;
     padding-right: 5%;
 }
-
+/* Styling for blog content headings */
 #blogContent h1 {
     font-size: 2rem;
     color: #3e6177;
 }
+/* Styling for blog content subheadings */
 #blogContent h2 {
     font-family: 'Rubik', sans-serif;
     margin: 0;
     font-size: 1.8rem;
     font-weight: 400;
 }
-
+/* Styling for material section in blog content */
 #blogContent #material {
     margin-top: 1%;
     font-weight: 500;
     font-size: 1em;
 }
-
+/* Styling for images in blog content */
 #blogContent img{
     max-height: 250px;
     border-radius: 10px;
     margin: 0 2% 0 0; 
 }
-
+/* Styling for shop link in blog content that links to shop.html */
 #blogContent #shopLink {
     text-decoration: underline;
     color:#3e6177;
 }
 
-/* New Arrivals */
-.new-arrivals {
-	/* Sidebar*/
-    width: 50%;
-	background-color: #d5debb;
-    margin-left: auto; 
-    margin-right: 0;
-    max-height: 500px;
-    overflow: scroll;
-}
 
-.new-arrivals::-webkit-scrollbar {
-    /* Hide scroll bar for new-arrivals section */
-    display: none;
-}
-
-.new-arrivals h1{
-    line-height: 0%;
-    padding-left: 3%;
-    padding-top: 1%;
-    font-size: 1.75rem;
-}
-
-.new-arrivals .display-items {
-    padding: 0% 2%;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(175px, 1fr));
-}
-
-.new-arrivals .display-items .item-container{
-    position: relative;
-    border-radius: 10px;
-    margin: 0% 2% 4% 2%;
-}
-.new-arrivals .item-container::after {
-    content: "";
-    display: block;
-    padding-bottom: 100%;
-  }
-  
-.new-arrivals .item{
-    position: absolute;
-    width: 100%;
-    height: 80%;
-    object-fit: cover;
-    border-radius: 10px 10px 0 0;
-}
-
-.new-arrivals .itemName{
-    position: absolute;
-    display: block;
-    bottom: 0;
-    background-color: #f0efe9;
-    height: 20%;
-    width: 100%;
-    border-radius: 0 0 10px 10px;
-    text-align: center;
-    font-weight: 500;
-    font-size: 100%;
-}
-
-/* Highlights */
-#highlights{
-    padding: 0 2% 2% 2%;
-    background-color: #e4d7cb;
-}
-
-#highlights .blog-post {
-    /* position: relative; */
-    max-width: 100%;
-    min-height: 250px;
-    margin: 0;
-    display: flex;
-    flex-wrap: wrap;
-    color: #000000;
-}
-
-#highlights h1{
-    padding: 2% 0%;
-    margin: 0;
-    font-size: 1.75rem;
-}
-
-/* Shop Container */
+/* Shop Container shop.html */
 .shop-container {
     margin-top: 50px;
     margin-left: 2%;
@@ -341,29 +347,25 @@ nav a {
     width: 20%;
     margin-right: 2%;
 }
-
+/* Styling for shop sidebar */
 #sidebar-filter ul{
     margin-top: 0;
     list-style-type: none;
     padding: 0;
     border-right: 2px solid #805222;
 }
-#sidebar-filter ul li{
-    margin-bottom: 5px;
-}
-/* Style the buttons */
+/* Styling for shop sidebar choices */
 .btn {
+    margin-bottom: 5px;
     border: none;
     outline: none;
     padding: 12px 16px;
     cursor: pointer;
 }
-
 /* Add a light grey background on mouse-over */
 .btn:hover {
     background-color: #ddd;
 }
-
 /* Add a dark background to the active button */
 .btn.active {
     background-color: #666666;
@@ -371,22 +373,23 @@ nav a {
 }
 
 
-/* Shop Items*/
-
 /* Items with class "dont-show" will not be shown as display set to none. */
 .dont-show {
     display: none;
 }
+/* Styling for shop items section which contains all available items */
 .shop{
     width: 80%;
     margin-left: auto; 
     margin-right: 0;
 }
+/* Grid display for items */
 .shop .display-items {
     padding: 0;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
+/* Styling for individual items in shop section */
 .shop .display-items .item-container{
     position: relative;
     border-radius: 10px;
@@ -396,8 +399,8 @@ nav a {
     content: "";
     display: block;
     padding-bottom: 100%;
-  }
-  
+}
+/* Styling for images */
 .shop .item{
     position: absolute;
     width: 100%;
@@ -405,7 +408,7 @@ nav a {
     object-fit: cover;
     border-radius: 10px 10px 0 0;
 }
-
+/* Styling for item descriptions in shop section */
 .shop .itemDesc{
     padding: 2% 0;
     position: absolute;
@@ -423,6 +426,7 @@ nav a {
     font-weight: 600;
 }
 
+
 /* Footer desgin */
 .site-footer
 {   
@@ -438,9 +442,7 @@ nav a {
 .wrap {
     display: flex;
     flex-wrap: wrap;
-
 }
-
 /* Set margin space between class="social-media" and class="newsletter-container" */
 .social-media {
     margin-right: 5%;
@@ -524,7 +526,6 @@ input[type=submit]:hover {
     width: auto;
     margin-right: 0;
 }
-
 /* Links in footer */
 .site-footer nav a {
     padding-left: 0;
@@ -535,15 +536,21 @@ input[type=submit]:hover {
 /*mobile view*/
 /* When website is max-width 480px */
 @media screen and (max-width: 480px) {
+    /* For sections that are only displayed on mobile */
     .only-on-mobile {
         display: inline;
     }
-
+    /* Hides sections that are not to be seen on mobile */
+    .not-on-mobile {
+        display:none;
+    }
+    /* Change alignment of logo in header to center */
     header #logo {
         padding-left: 0;
         margin-left: auto;
         margin-right: auto;
     }
+    /* Change the size of the logo image */
     header img {
         display: block;
         padding-left: 0;
@@ -551,10 +558,8 @@ input[type=submit]:hover {
         margin: auto;
     }
 
-    .not-on-mobile {
-        display:none;
-    }
 
+    /* index.html to be set to inline instead of flex */
     #introduction {
         display: inline;
     }
@@ -615,9 +620,5 @@ input[type=submit]:hover {
     #blog {
         padding-left: 3%;
         padding-right: 3%;
-    }
-    
-    
-
-    
+    }    
 }
